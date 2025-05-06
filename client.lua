@@ -1,6 +1,8 @@
+local maxThrowStrength = 100
+local forceMultiplier = 100
+
 local carryingVehicle, attachedVehicle = false, nil
 local isChargingThrow, throwStrength = false, 0
-local maxThrowStrength = 100
 local animDict = "anim@mp_rollarcoaster"
 local animName = "hands_up_idle_a_player_one"
 local attachBone = 24816
@@ -62,7 +64,7 @@ CreateThread(function()
             
                 Wait(10) 
             
-                local force = (throwStrength / maxThrowStrength) * 100.0
+                local force = (throwStrength / maxThrowStrength) * forceMultiplier
                 ApplyForceToEntity(attachedVehicle, 1, forward.x * force, forward.y * force, 5.0, 0.0, 0.0, 0.0, 0, false, true, true, false, true)
             
                 ClearPedTasks(player)

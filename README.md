@@ -27,8 +27,6 @@ You can tweak values directly in `client.lua`:
 
 ```lua
 local maxThrowStrength = 100        -- Max charge level
-local offset = 2.0                  -- Distance in front of player before throw
-local upwardForce = 5.0             -- Vertical lift applied
 local forceMultiplier = 100.0       -- Throw power scaling
 ```
 
